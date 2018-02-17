@@ -32,7 +32,7 @@ export function image(original, preview) {
 * @argument string url preview image thumbnail
 *
 */
-export function image(source, preview) {
+export function video(source, preview) {
   return {
       "type": "video",
       "originalContentUrl": source,
@@ -73,7 +73,8 @@ export function  confirmMessage(message){
 
 /**
 * Button Message Template
-* @argument {array of action button}
+* @argument array of action button
+* @argument array of action button
 * action btn obj
 * {
 *  "type": "uri",
@@ -82,17 +83,17 @@ export function  confirmMessage(message){
 * }
 */
 
-export function buttonMessage(arr){
+export function buttonMessage(title ,arr){
   return {
     "type": "template",
-    "altText": "This is a buttons template",
+    "altText": "Untuk melihat pesan ini harap melihat di handphone kamu :)",
     "template": {
         "type": "buttons",
         "thumbnailImageUrl": "https://example.com/bot/images/image.jpg",
         "imageAspectRatio": "rectangle",
         "imageSize": "cover",
         "imageBackgroundColor": "#FFFFFF",
-        "title": "Menu",
+        "title": title,
         "text": "Please select",
         "defaultAction": {
             "type": "uri",
